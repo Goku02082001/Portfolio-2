@@ -29,11 +29,11 @@ const Work = () => {
         }
     }
     return (
-        <Box id="projects" className='workDiv' sx={{ width: "85%", margin: "15% auto", padding: "0% 10px" }}>
+        <Box id="projects" className='Project' sx={{ width: "85%", margin: "15% auto", padding: "0% 10px" }}>
             <Box sx={{ borderTop: "2px solid rgb(35,53,84)", position: "relative" }} >
                 <Zoom in={checked2}>
 
-                    <Typography variant='h4' sx={{ color: "#00FF41", backgroundColor: "rgb(11,24,47)", position: "absolute", top: "-25px", left: "41%", padding: "0% 5% 0% 5%", fontFamily: "Poppins" }} >Work</Typography>
+                    <Typography variant='h4' sx={{ color: "#00FF41", backgroundColor: "rgb(11,24,47)", position: "absolute", top: "-25px", left: "41%", padding: "0% 5% 0% 5%", fontFamily: "Poppins" }} >Project</Typography>
                 </Zoom>
             </Box>
             <Box className='projectContainer' sx={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", justifyContent: "center", marginTop: "5%", flexWrap: "wrap", padding: '0' }}>

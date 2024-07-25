@@ -15,14 +15,14 @@ export const details={
         val1:"Skills",
         val2:"nav-link skills"
       },{
-        val1:"Work",
+        val1:"Project",
         val2:"nav-link projects"
       },{
         val1:"Contact",
         val2:"nav-link contact"
       }],
     scrollPosition:[0,545,1070,1730,2400],
-    className:["introDiv","about section","skillContainer","workDiv","contactDiv"],
+    className:["introDiv","about section","skillContainer","Project","contactDiv"],
     // className:["nav-link home","nav-link about","nav-link skills","nav-link projects"],
     linkedInLink:"https://www.linkedin.com/in/gaurav-roy-61588128a/",
     githubLink:"https://github.com/Goku02082001",
@@ -93,7 +93,7 @@ export const details={
             type:"Colaborative",
             tech:["JavaScript","HTML","CSS"],
             img: Jwellery,
-            description:"This is a Jwellery Website."
+            description:"Discover the timeless elegance of handcrafted jewelry at our online boutique. Each piece is designed to captivate and crafted with the finest materials, perfect for every occasion."
         },
         
         {
@@ -103,7 +103,7 @@ export const details={
             type:"Collaborative",
             tech:["React","Redux","Chakra UI"],
             img: BuildHub,
-            description:"This is a Fitness Website"
+            description:"Achieve your fitness goals with our comprehensive platform, offering personalized workout plans, expert nutrition advice, and a supportive community to keep you motivated and on track"
         },
 
         {
@@ -113,7 +113,7 @@ export const details={
             type:"Collaborative",
             tech:["React","Chakra UI",'Node JS','Express JS'],
             img: CodeFlow,
-            description:"It's a Online Code Editor"
+            description:"Streamline your coding experience with our powerful online code editor, featuring real-time collaboration, syntax highlighting, and an intuitive interface designed for developers of all levels."
         }
         
     ]

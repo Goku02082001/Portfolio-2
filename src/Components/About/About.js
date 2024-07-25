@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import "./About.css"
 import profilePic from '../../media/profilePic.jpg'
 import LinearDeterminate from '../MiniComponent/ProgressComp';
+// import resume from '../../media/Gaurav-resume.pdf'
 import resume from '../../media/Gaurav-resume.pdf'
 const About = () => {
     const [checked1, setChecked1] = useState(false);
@@ -24,7 +25,7 @@ const About = () => {
 
     const openResume = () => {
         window.open(
-            "https://drive.google.com/file/d/1u4kqswMS06Pv9zVk7yV_OH8cC8Uu9EGz/view?usp=sharing",
+            "https://drive.google.com/file/d/1kaIg7dSKihnCciYLPZB_NM6-kP9lC9iX/view?usp=sharing",
             "_blank"
         );
     };
