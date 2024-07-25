@@ -4,7 +4,7 @@ import LinearDeterminate from "./ProgressComp";
 import logo from "../../media/logo.png";
 import "./Navbar.css";
 import { details } from "../../details";
-import resume from '../../media/Gaurav-resume.pdf';
+import resume from '../../media/Gaurav-resume.pdf'
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import { Link } from 'react-scroll';
 
@@ -30,7 +30,7 @@ const Navbar = ({ scrollHandle }) => {
 
   const openResume = () => {
     window.open(
-      "https://drive.google.com/file/d/1Aci7_rSP3SLTU8my0pHRmMFdSakmlZht/view?usp=sharing", "_blank"
+      "https://drive.google.com/file/d/1u4kqswMS06Pv9zVk7yV_OH8cC8Uu9EGz/view?usp=sharing", "_blank"
     );
   };
 
