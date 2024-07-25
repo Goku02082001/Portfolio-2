@@ -1,34 +1,52 @@
+/* Contact.css */
+.contactheading {
+    font-size: 3rem;
+}
 
+.contactSubHeading {
+    font-size: 1.2rem;
+    width: 85%;
+}
 
-@media screen and (max-width:950px) {
-    
-    .contactheading{
-        font-size: 3rem!important;
+.contactButton {
+    margin-top: 4%;
+}
+
+.contact-logo a {
+    font-size: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 950px) {
+    .contactheading {
+        font-size: 3rem !important;
     }
-    
-    .contactSubHeading{
-        font-size: 1.2rem!important;
-        width: 85%!important;
+
+    .contactSubHeading {
+        font-size: 1.2rem !important;
+        width: 85% !important;
     }
-    .contactButton{
-        margin-top: 4%!important;
+
+    .contactButton {
+        margin-top: 4% !important;
     }
 }
 
-@media screen and (max-width:400px) {
-    
-    .contactheading{
-        font-size: 2rem!important;
+@media screen and (max-width: 400px) {
+    .contactheading {
+        font-size: 2rem !important;
     }
-    
-    .contactSubHeading{
-        font-size: 0.8rem!important;
-        width: 100%!important;
+
+    .contactSubHeading {
+        font-size: 0.8rem !important;
+        width: 100% !important;
     }
-    .contactButton{
-        margin-top: 4%!important;
+
+    .contactButton {
+        margin-top: 4% !important;
     }
-    .contact-logo a{
-        font-size: 1rem!important;
+
+    .contact-logo a {
+        font-size: 1rem !important;
     }
 }

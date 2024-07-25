@@ -1,45 +1,74 @@
-import { Box, Button, Typography, Zoom } from '@mui/material'
-import React, { useState } from 'react'
-import { details } from "../../details"
-import "./Contact.css"
+import { Box, Button, TextField, Typography, InputLabel } from '@mui/material';
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
+import "./Contact.css";
 
 const Contact = () => {
-    const [checked1, setChecked1] = useState(false);
-    const [checked2, setChecked2] = useState(false);
-    const [scrolled, setScrolled] = useState(0);
+    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
-    window.addEventListener("scroll", () => {
-        setScrolled(document.documentElement.scrollTop);
-    })
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        });
+    };
 
-    if (scrolled >= 2700) {
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
-        setTimeout(() => {
-            setChecked1(true)
-        }, 500)
-        setTimeout(() => {
-            setChecked2(true)
-        }, 600)
-    }
+        emailjs.sendForm('service_kzc5cnl', 'template_wwdb0mq', e.target, 'yybG_fARe7aI9Jbyp')
+            .then((result) => {
+                console.log(result.text);
+                alert("Message sent successfully!");
+            }, (error) => {
+                console.log(error.text);
+                alert("Failed to send the message. Please try again.");
+            });
+        setFormData({ name: '', email: '', message: '' }); // Clear the form
+    };
 
-
-
-    const mailTo = () => {
-        window.open("mailto:shyamolroy12353@gmail.com", "_blank");
-    }
     return (
-        <Box sx={{ width: "80%", margin: "10% auto", padding: "0% 10px" }}>
-            <Typography className='contactheading' variant='h2' sx={{ textAlign: "center", fontWeight: "600", color: "#00FF41", fontFamily: "Poppins" }}>Get In Touch</Typography>
-            <Typography className='contactSubHeading' variant='h5' sx={{ textAlign: "center", width: "70%", margin: "auto", color: "#008F11", fontFamily: "Poppins" }}>I'm currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</Typography>
-            <Button className='contactButton' onClick={mailTo} variant="outlined" sx={{ border: "1px solid #008F11", color: "#00FF41", fontSize: "0.9rem", margin: "auto", padding: "1% 3%", display: "block", marginTop: "2%", fontFamily: "Poppins" }}>Say Hello</Button>
-            <Box className='contact-logo' sx={{ marginTop: "2%", display: "flex", justifyContent: "center", alignContent: "start", alignItems: "center", gap: "15px", flexDirection: "column" }}>
-                <a className='socialLogo' id="contact-github" target="_blank" rel="noopener noreferrer" href={details.githubLink} style={{ textDecoration: "none", color: "#00FF41", fontSize: "1.7rem" }}><i className="fa-brands fa-github"></i>   iamGaurav</a>
-                <a className='socialLogo' id="contact-linkedin" target="_blank" rel="noopener noreferrer" href={details.linkedInLink} style={{ textDecoration: "none", color: "#00FF41", fontSize: "1.7rem" }}><i className="fa-brands fa-linkedin"></i>   Gaurav Roy</a>
-                <a className='socialLogo' id="contact-phone" target="_blank" rel="noopener noreferrer" href={`tel:+91${details.phone}`} style={{ textDecoration: "none", color: "#00FF41", fontSize: "1.5rem" }}><i class="fa-solid fa-phone"></i>   +91 8700629297</a>
-                <a className='socialLogo' id="contact-email" target="_blank" rel="noopener noreferrer" href={`mailto:${details.mailLink}`} style={{ textDecoration: "none", color: "#00FF41", fontSize: "1.5rem" }}><i className="fa-regular fa-envelope"></i>  shyamolroy12353@gmail.com</a>
+        <Box sx={{ width: "80%", margin: "10% auto", padding: "0 10px" }}>
+            <Typography variant='h2' sx={{ textAlign: "center", fontWeight: "600", color: "#00FF41", fontFamily: "Poppins" }}>
+                Contact Me
+            </Typography>
+            <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }}>
+                <InputLabel htmlFor="name" sx={{ color: "#00FF41", marginBottom: "5px" }}>Name</InputLabel>
+                <TextField
+                    fullWidth
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    sx={{ mb: 3, backgroundColor: 'white' }}
+                />
+                <InputLabel htmlFor="email" sx={{ color: "#00FF41", marginBottom: "5px" }}>Email</InputLabel>
+                <TextField
+                    fullWidth
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    type="email"
+                    sx={{ mb: 3, backgroundColor: 'white' }}
+                />
+                <InputLabel htmlFor="message" sx={{ color: "#00FF41", marginBottom: "5px" }}>Message</InputLabel>
+                <TextField
+                    fullWidth
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    multiline
+                    rows={4}
+                    sx={{ mb: 3, backgroundColor: 'white' }}
+                />
+                <Button type="submit" variant="contained" color="primary" sx={{ display: "block", margin: "auto" }}>
+                    Send
+                </Button>
             </Box>
         </Box>
-    )
-}
+    );
+};
 
-export default Contact
+export default Contact;
