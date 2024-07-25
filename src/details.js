@@ -21,7 +21,7 @@ export const details={
         val1:"Contact",
         val2:"nav-link contact"
       }],
-    scrollPosition:[0,545,1070,1730,3400],
+    scrollPosition:[0,545,1070,1730,2400],
     className:["introDiv","about section","skillContainer","workDiv","contactDiv"],
     // className:["nav-link home","nav-link about","nav-link skills","nav-link projects"],
     linkedInLink:"https://www.linkedin.com/in/gaurav-roy-61588128a/",

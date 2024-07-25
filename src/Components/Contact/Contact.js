@@ -28,7 +28,7 @@ const Contact = () => {
     };
 
     return (
-        <Box sx={{ width: "80%", margin: "10% auto", padding: "0 10px" }}>
+        <Box id="contactDiv" sx={{ width: "80%", margin: "10% auto", padding: "0 10px" }}>
             <Typography variant='h2' sx={{ textAlign: "center", fontWeight: "600", color: "#00FF41", fontFamily: "Poppins" }}>
                 Contact Me
             </Typography>
